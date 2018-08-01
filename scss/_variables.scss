@@ -1,39 +1,47 @@
-// Variables
+/*font Variables*/
+$ral: 'Raleway', sans-serif;
+$yell: 'Yellowtail', cursive;
+$bree: 'Bree Serif', serif;
 
-// Restate Bootstrap Variables
+/*Color Variables*/
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+$baseColor: #fec608;
+$dip: #222222;  
+$pfont: #333333;
+$gray: #666666;
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #BD5D38 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
 
-$primary:       $orange !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
 
-// Page Variables
+// Mixins
+@mixin transition($property: all, $duration: 400ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
 
-$sidebar-base-width: 17rem;
+// Placeholder Mixins
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+.col-md-offset-right-1 {
+    margin-right: 8.33333333%;
+}
+// Font family link
+
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Raleway:100,200,300,400,500,600,700,800,900|Yellowtail');
+
+//@font-face {
+//    font-family: "ralH";
+//    src: url(../fonts/theme-font/Raleway-Heavy.woff);
+//}
+//@font-face {
+//    font-family: "monR";
+//    src: url(../fonts/theme-font/Montserrat-Regular.woff);
+//}
+//@font-face {
+//    font-family: "monB";
+//    src: url(../fonts/theme-font/Montserrat-Bold.woff);
+//}
